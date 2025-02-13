@@ -1,0 +1,29 @@
+name: Run and Test Bash Scripts
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch: # Allows manual trigger from GitHub UI
+
+jobs:
+  run-scripts:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Give Execute Permission to Scripts
+        run: chmod +x ns.sh ns_delete.sh
+
+      - name: Run First Bash Script
+        run: ./ns.sh
+
+      - name: Run Clean up
+        run: |
+          echo "Running tests..."
+          ./ns_delete.sh || { echo "Tests failed"; exit 1; }
