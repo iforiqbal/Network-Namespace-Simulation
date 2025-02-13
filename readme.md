@@ -18,11 +18,9 @@ This project demonstrates how to create and connect two network namespaces (`ns-
 4. [Testing Connectivity](#testing-connectivity)
 5. [Inspecting ARP and Routing Tables](#inspecting-arp-and-routing-tables)
 6. [Cleaning Up](#cleaning-up)
-7. [Why This Task?](#why-this-task)
-8. [Scripts](#scripts)
-   - [ns.sh](#nssh)
-   - [ns_delete.sh](#ns_deletesh)
-9. [Poridhi Lab Issue](#poridhi-lab-issue)
+7. [How to Use the Scripts](#How-to-Use-the-Scripts)
+8. [Poridhi Lab Issue](#poridhi-lab-issue)
+9. [Github Action Workflow](#Added-github-actions-workflow)
 
 ---
 
@@ -240,6 +238,11 @@ The need to explicitly add the `iptables` rules for the bridge interfaces (`br1`
    sudo ./ns_delete.sh
    ```
 
+---
+
+---
+### Added github actions workflow
+   - You can check the workflow from actions, there is a simple pipeline for test this two scripts in Ubuntu
 ---
 
 Let me know if you need further assistance! 😊
